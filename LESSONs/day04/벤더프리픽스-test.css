@@ -1,0 +1,11 @@
+/* Autoprefixer를 설치하고 저장하면 아래와 같이 자동으로  */
+
+/* p { 저장하면 바로 아래 처럼 자동프리픽스됨
+    display: flex;
+} */
+
+p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}

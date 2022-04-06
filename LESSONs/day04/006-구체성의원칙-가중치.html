@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>구체성의원칙 가중치</title>
+        <style>
+            /* 1점 */
+            h1 {
+                color: red;
+            }
+            /* 11점 */
+            h1.test {
+                color: blue;
+            }
+            /* 10점 */
+            .yellowgreen {
+                color: yellowgreen;
+            }
+            /* 100점 */
+            #fourth {
+                color: skyblue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>h1의 첫번째</h1>
+        <h1 class="yellowgreen">h1의 두번째</h1>
+        <h1 class="yellogreen test">h1의 두번째</h1>
+        <h1 id="fourth" class="yellowgreen">h1의 네번째</h1>
+    </body>
+</html>
