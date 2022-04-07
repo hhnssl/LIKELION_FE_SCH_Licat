@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>overflow : hidden vs display:none 차이</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #ccc;
+            }
+
+            .one {
+                width: 150px;
+                height: 150px;
+                background-color: #000;
+            }
+
+            .baby {
+                width: 130px;
+                height: 130px;
+                background-color: #fff;
+            }
+
+            .two {
+                width: 150px;
+                height: 150px;
+                background-color: #999;
+
+                /* overflow: hidden; */
+
+                font-size: 15px;
+            }
+
+            .two p {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <div class="one">
+            <div class="baby"></div>
+        </div> -->
+        <div class="two">
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Voluptatibus quibusdam aliquam eveniet voluptates illo.
+                Recusandae reprehenderit veritatis temporibus incidunt at
+                doloremque! Quas aut aspernatur doloremque quam eaque eligendi
+                in itaque.
+            </p>
+        </div>
+    </body>
+</html>
