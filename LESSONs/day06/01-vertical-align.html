@@ -1,0 +1,82 @@
+<!-- img는 폰트의 베이스라인에 맞춰 정렬된다! -->
+<!-- img를 block으로 바꾸면 베이스라인이 사라져 여백을 없앨 수는 있지만, 협업을 할 경우 다른 사람에게 혼란을 주거나 다른 태그들을 깨지게 만들 수도 있다. -->
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <style>
+            .test {
+                border: 1px solid black;
+            }
+
+            .container {
+                /* 사진이 베이스라인 위에 뜨기 때문에 의도치않은 여백(베이스라인때문에)이 생김 */
+                display: inline;
+                border: 1px solid black;
+            }
+
+            .one {
+                /* 의도치 않은 베이스라인 여백 해결법 */
+                /* vertical-align이 탑이 되면서 이미지가  탑을 기준으로 정렬된다.*/
+                /* vertical-align: top; 을 줘서 컨테이너의 탑을 기준으로 정렬된다. */
+                vertical-align: top;
+            }
+
+            .two {
+                vertical-align: middle;
+            }
+
+            .three {
+                border: 10px solid black;
+            }
+
+            .four {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img
+                width="200px"
+                src="https://www.tvn-2.com/nacionales/Imagen-ilustrativa-gato-medio-bosque_18585331.jpg"
+                alt=""
+            />
+            yello world
+        </div>
+
+        <br /><br />
+
+        <div class="container">
+            <img
+                width="200px"
+                class="one"
+                src="https://www.tvn-2.com/nacionales/Imagen-ilustrativa-gato-medio-bosque_18585331.jpg"
+                alt=""
+            />
+            yello world
+        </div>
+
+        <br /><br />
+
+        <!-- font에서 e의 중앙선이 middle입니다. -->
+        <div class="container">
+            <img
+                width="200px"
+                class="two"
+                src="https://www.tvn-2.com/nacionales/Imagen-ilustrativa-gato-medio-bosque_18585331.jpg"
+                alt=""
+            />
+            yello world
+        </div>
+
+        <div class="three">
+            <img
+                width="200px"
+                class="four"
+                src="https://www.tvn-2.com/nacionales/Imagen-ilustrativa-gato-medio-bosque_18585331.jpg"
+                alt=""
+            />
+        </div>
+    </body>
+</html>

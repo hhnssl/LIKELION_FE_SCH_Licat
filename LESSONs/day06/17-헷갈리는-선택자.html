@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <style>
+            li .one {
+                /* li 안에 있는 자식(even 자손)요소의 클래스가 one인것 */
+                color: red;
+            }
+
+            li.one {
+                /* li태그이면서 자기 자신의 클래스가 one인것 */
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>hello world</h1>
+        <ul>
+            <li><p class="one">hello world1</p></li>
+            <li><p class="one">hello world2</p></li>
+            <li>
+                <p>
+                    <div class="one">hello world3</div>
+                </p>
+            </li>
+            <li class="one">hello world4</li>
+            <li class="one">hello world5</li>
+        </ul>
+    </body>
+</html>
