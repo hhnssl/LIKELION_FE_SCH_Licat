@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <style>
+            /* 문자열에 paul이 들어가는 것 모두 선택 */
+            /* 아래와 같이 공백을 붙이면 의도와 달라질 수 있음! 첫번째 클래스를 포함 안시키기 때문 */
+            p[class*="paul "] {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="paul">hello world</p>
+        <p class="paul test">hello world</p>
+        <p class="paultest">hello world</p>
+        <p class="paullab">hello world</p>
+        <p class="koreapaullab">hello world</p>
+        <p class="paullab koreaone">hello world</p>
+        <p class="world">hello world</p>
+    </body>
+</html>

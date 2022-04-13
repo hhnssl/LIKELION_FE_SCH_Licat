@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <style>
+            /* n은 0부터 시작한다!!! */
+            /* 
+            홀수
+            .foo:nth-child(2n + 1) {
+                color: red;
+            }
+
+            짝수
+            .foo:nth-child(2n) {
+                color: red;
+            }
+
+            홀수
+            .foo:nth-child(2n - 1) {
+                color: red;
+            } */
+
+            /* 홀수
+            .foo:nth-child(odd) {
+                color: red;
+            }
+
+            짝수
+            .foo:nth-child(odd) {
+                color: red;
+            } */
+
+            .foo:nth-child(3n + 1) {
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li class="foo">1</li>
+            <li class="foo">2</li>
+            <li class="foo">3</li>
+            <li class="foo">4</li>
+            <li class="foo">5</li>
+        </ul>
+    </body>
+</html>

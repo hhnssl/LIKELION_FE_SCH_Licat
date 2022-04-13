@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <style>
+            p {
+                position: relative;
+                border: 5px solid blue;
+                /* 이 p 가 움직이면 가상요소도 따라 움직임 */
+            }
+
+            span {
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                top: 5px;
+                left: 5px;
+                display: block;
+                background-color: pink;
+            }
+
+            /* 가상요소는 inline이라 width를 줄수 없기 때문에 block으로 바꾼 것임!! */
+            p::before {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                content: "";
+                display: block;
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+
+            p::after {
+                position: absolute;
+                top: 50px;
+                left: 50px;
+                content: "";
+                display: block;
+                width: 100px;
+                height: 100px;
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <p>hello <span>world</span></p>
+    </body>
+</html>

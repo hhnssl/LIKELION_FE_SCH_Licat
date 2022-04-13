@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>속성 선택자</title>
+        <style>
+            /* paullab 일치 */
+            /* 공백을 포함하지 않음 */
+            p[class="paullab"] {
+                font-size: 48px;
+            }
+
+            /* 시작값이 korea */
+            p[class^="korea"] {
+                color: blue;
+            }
+
+            /* 시작값이 korea라는 단어 뒤에 하이픈이 오거나 다른 추가적인 단어가 없을 경우 == 그냥 한 단어로 딱 떨어져야함! 잘 사용 안함~*/
+            p[class|="korea"] {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="paullab">hello world</p>
+        <p class="koreapaullab">hello world</p>
+        <p class="korea-paullab">hello world</p>
+        <p class="korea">hello world</p>
+        <p class="koreapa">hello world</p>
+    </body>
+</html>

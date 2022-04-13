@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>속성 선택자</title>
+        <style>
+            a[href] {
+                /* a 태그 중에서 href가 있는 애들 */
+                font-size: 32px;
+            }
+
+            a[href="http://www.paullab.co.kr"]
+            {
+                font-size: 48px;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="http://www.paullab.co.kr">클릭해!</a>
+        <a href="#">클릭해!</a>
+        <a>클릭해!</a>
+
+        <!-- p[one=two] : p 태그에 one 속성에 two라는 클래스를 집어넣어라. 이 emmet이랑 헷갈리지 말기~-->
+        <p one="two"></p>
+    </body>
+</html>
