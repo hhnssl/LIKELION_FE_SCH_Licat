@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <style>
+            .container {
+                display: grid;
+                height: 100vh;
+
+                /* 한 줄에 3개씩 배치 */
+                /* grid-template-columns: 50% 25% 25%; */
+
+                /* 한 줄에 4개씩 배치 */
+                /* grid-template-columns: 25% 25% 25% 25%; */
+
+                /* 한줄에 4개씩 각각 25%차지하여 배치 (위의 것과 같은 의미)*/
+                /* grid-template-columns: repeat(4, 25%); */
+
+                /* 1fraction(분수, 일부) */
+                /* grid-template-columns: repeat(3, 1fr); */
+
+                /* grid-template-columns: 100px 30% 30%; */
+
+                /* grid-template-columns: 100px 1fr 1fr; */
+
+                /* 간격 주기 */
+                /* gap: 10px 20px; */
+
+                grid-gap: 20px;
+            }
+
+            .item {
+                background-color: pink;
+                border: solid 1px black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+        </div>
+    </body>
+</html>

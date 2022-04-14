@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <style>
+            div {
+                background-color: blue;
+                width: 100px;
+                height: 100px;
+                /* transition: all 1s cubic-bezier(0.06,-1.51, 0.68, 2.42); */
+                transition: width 1s;
+                /* transition: width .5s;: 0.5초 */
+
+                /* 마우스 호버하고 3초뒤 트랜지션 발동 */
+                transition-delay: 3s;
+            }
+
+            div:hover {
+                width: 150px;
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>
