@@ -1,0 +1,15 @@
+a {
+  width: 100px;
+  height: 100px;
+  color: white;
+  background-color: black;
+  border-radius: 40px;
+}
+
+button {
+  width: 100px;
+  height: 100px;
+  color: white;
+  background-color: black;
+}
+/*# sourceMappingURL=018-mixin-contents.css.map */

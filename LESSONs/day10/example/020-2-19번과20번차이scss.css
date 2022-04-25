@@ -1,0 +1,23 @@
+.base-box, .box_ {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border: 5px solid black;
+}
+
+.base-box_ {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.box_ {
+  border: 5px solid black;
+}
+/*# sourceMappingURL=020-2-19번과20번차이scss.css.map */

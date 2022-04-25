@@ -1,0 +1,27 @@
+@mixin one {
+    width: 100px;
+    height: 100px;
+    color: white;
+    @content;
+    // @content; <-얘가 없으면 오류가 난다.
+}
+
+a {
+    @include one {
+        background-color: black;
+        border-radius: 40px;
+    }
+}
+
+// 위와 동일한 css가 나온다. 스스로 의미에 따라 선택하여 쓰면 됨 for 아키텍쳐
+
+@mixin two {
+    width: 100px;
+    height: 100px;
+    color: white;
+}
+
+button {
+    @include two;
+    background-color: black;
+}

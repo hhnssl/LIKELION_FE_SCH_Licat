@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": ";AACA,uBAAuB;AAEvB,AACI,EADF,CACE,EAAE,CAAC;EACC,KAAK,EAAE,GAAG;EACV,SAAS,EAAE,IAAI;CAClB;;AAGL,AAAA,IAAI,CAAC;EACD,KAAK,EAAE,GAAG;CAOb;;AARD,AAEI,IAFA,CAEA,IAAI,CAAC;EACD,KAAK,EAAE,KAAK;CACf;;AAJL,AAKI,IALA,CAKA,MAAM,CAAC;EACH,KAAK,EAAE,IAAI;CACd",
+    "sources": [
+        "001-주석과_nesting.scss"
+    ],
+    "names": [],
+    "file": "001-주석과_nesting.css"
+}

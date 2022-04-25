@@ -1,0 +1,12 @@
+//19번과의 차이 알기
+
+%base-box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.box {
+    @extend %base-box;
+    border: 5px solid black;
+}
