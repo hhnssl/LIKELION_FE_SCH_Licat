@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAKA,AAAA,IAAI,CAAC;EACD,KAAK,EALG,KAAoB;CAM/B",
+    "sources": [
+        "12-.scss"
+    ],
+    "names": [],
+    "file": "12-.css"
+}
