@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tailwind flex</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- https://tailwindcss.com/docs/flex -->
+    <!-- https://tailwindcss.com/docs/width -->
+    <div class="flex flex-wrap border-solid border-4 border-red-300 m-3">
+        <div class="flex-1 border-solid border-4 border-blue-500">
+            hello world
+        </div>
+        <div class="flex-2 border-solid border-4 border-blue-500">
+            hello world
+        </div>
+    </div>
+    
+    <div class="flex flex-wrap border-solid border-4 border-red-300 m-3">
+        <div class="w-1/4 border-solid border-4 border-blue-500">
+            hello world
+        </div>
+        <div class="w-3/4 border-solid border-4 border-blue-500">
+            hello world
+        </div>
+    </div>
+
+    <p class="">wrap</p>
+    <!-- <div class="flex flex-wrap border-solid border-4 border-red-300 m-3"> -->
+    <div class="flex flex-wrap border-solid border-4 border-red-300 mb-3 ml-3 mr-3">
+        <div class="border-solid border-4 border-blue-500">
+            hello world
+        </div>
+        <div class="border-solid border-4 border-blue-500">
+            hello world
+        </div>
+    </div>
+
+    <!-- 엔터에서 여백 생김 -->
+    <div class="box-border border-solid border-4 border-red-300 m-3">
+        <div class="inline-block box-border w-1/4 border-solid border-4 border-blue-500">
+            hello world
+        </div>
+        <div class="inline-block box-border w-1/4 border-solid border-4 border-blue-500">
+            hello world
+        </div>
+    </div>
+
+    <div class="flex-col flex-nowrap border-solid border-4 border-red-300 m-3">
+        <div class="border-solid border-4 border-blue-500">
+            hello world
+        </div>
+        <div class="border-solid border-4 border-blue-500">
+            hello world
+        </div>
+    </div>
+
+    <!-- 중앙정렬 -->
+    <div class="flex w-36 h-36 justify-center items-center border-solid border-4 border-red-300 m-3">
+        <div class="border-solid border-4 border-blue-500">01</div>
+    </div>
+</body>
+</html>
