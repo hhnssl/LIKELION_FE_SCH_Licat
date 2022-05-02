@@ -1,2 +1,5 @@
 0.lesson_materials
 day08-flex-복습-실무
+.prettierignore
+.prettierrc
+reset.css

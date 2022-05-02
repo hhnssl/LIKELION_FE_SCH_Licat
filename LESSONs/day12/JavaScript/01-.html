@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hello javascript</title>
+  </head>
+  <body>
+    <p id="one"></p>
+
+    <script>
+      // html문서에서.id가 one인 것을 찾아서. html안에다가 = 'hello <strong>world - document</strong>'를 넣어라.
+      document.getElementById('one').innerHTML =
+        'hello <strong>world - document</strong>';
+      // innerHTML가 아니라 innerText로 넣으면 저 문자열 그대로 나온다.
+
+      console.log('hello world - console');
+      console.error('hello world - console error');
+
+      window.alert('hello world - alert');
+
+      //바로 문서에 입력시키기
+      document.write('<strong>hello!!</strong>world');
+    </script>
+  </body>
+</html>
