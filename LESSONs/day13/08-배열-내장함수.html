@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //배열 내장함수
+
+      let 과일 = ['사과', '수박', '복숭아', '딸기', '바나나'];
+      let 과일선물 = ['체리', '멜론'];
+
+      document.write(`과일 : ${과일} <br>`);
+      let 꺼낸과일 = 과일.pop()
+      document.write(`과일.pop() : ${꺼낸과일} <br>`);
+      document.write(`과일 : ${과일} <br>`);
+      document.write(`과일.push() : ${과일.push(꺼낸과일)} <br>`);
+      document.write(`과일 : ${과일} <br>`);
+
+      document.write(`------------------ <br>`);
+
+      let 문자열 = 과일.toString()
+      document.write(`과일.toString()[1] : ${문자열[1]} <br>`);
+      document.write(`과일.join('!!*') : ${과일.join('!!*')} <br>`);
+      document.write(`과일.shift() : ${과일.shift()} <br>`);
+      document.write(`과일.unshift() : ${과일.unshift('호준')} <br>`);
+      document.write(`과일 : ${과일} <br>`);
+      document.write(`과일.splice(1, 0, '한라봉') : ${과일.splice(1, 0, '한라봉')} <br>`);
+      document.write(`과일 : ${과일} <br>`);
+      document.write(`과일.slice(1, 3) : ${과일.slice(1, 3)} <br>`);
+      document.write(`과일 : ${과일} <br>`);
+      document.write(`과일.concat(과일선물) : ${과일.concat(과일선물)} <br>`);
+      document.write(`과일 : ${과일} <br>`);
+      document.write(`과일.sort() : ${과일.sort()} <br>`);
+      document.write(`과일 : ${과일} <br>`);
+      document.write(`과일.reverse() : ${과일.reverse()} <br>`);
+      document.write(`과일 : ${과일} <br>`);
+      document.write(`['1', '11', '2', '22'].sort() : ${['1', '11', '2', '22'].sort()} <br>`);
+      document.write(`['1', '11', '2', '22'].length : ${['1', '11', '2', '22'].length} <br>`);
+
+
+      function compare(a, b) {
+        if (a > b) {
+          return -1;
+        }
+        if (a < b) {
+          return 1;
+        }
+        return 0;
+      }
+
+      let 배열 = [1, 30, 4, 21, 100000]
+
+      배열.sort()
+      [1, 100000, 21, 30, 4]
+
+      배열.sort(compare)
+      [100000, 30, 21, 4, 1]
+
+      function compare(a, b) {
+        if (a < b) {
+          return -1;
+        }
+        if (a > b) {
+          return 1;
+        }
+        return 0;
+      }
+
+      배열.sort(compare)
+      [1, 4, 21, 30, 100000]
+
+      배열.length
+      배열.map
+      배열.fillter
+      배열.find
+
+      배열
+      (5) [1, 4, 21, 30, 100000]
+
+      배열.map(x => x**2)
+      [1, 16, 441, 900, 10000000000]
+
+      과일.map(x => x[0])
+      (6) ['딸', '바', '복', '수', '하나', '한']
+
+      let 전국구과일상점 = [['제주', 5], ['부산', 5], ['서울', 15], ['대전', 10]]
+
+      let 과일 = []
+      for (let x of 전국구과일상점){
+          과일.push(x[1]);
+      }
+
+      과일
+      (4) [5, 5, 15, 10]
+
+      let 전국구과일상점 = [['제주', 5], ['부산', 5], ['서울', 15], ['대전', 10]];
+      전국구과일상점.map(x => x[1])
+      (4) [5, 5, 15, 10]
+
+      전국구과일상점.filter(x => x >= 10)
+      []
+      전국구과일상점.filter(x => x[1] >= 10)
+      (2) [Array(2), Array(2)]
+
+      전국구과일상점.find(x => x[1] >= 10)
+      (2) ['서울', 15]
+
+      array
+      (5) [1, 30, 4, 21, 100000]
+      array.forEach(x => x**2)
+
+
+      let 제곱수 = []
+      array.forEach(x => 제곱수.push(x**2))
+
+      제곱수
+      (5) [1, 900, 16, 441, 10000000000]
+
+      //공백은 어디까지 병합되는가?
+      let fruits = 
+      [
+        "사과",
+        "오렌지",
+        "자두",
+      ];
+      fruits
+      (3) ['사과', '오렌지', '자두']
+
+      let fruits = 
+      [
+        "사과",
+        "오렌지",
+        "자두",
+      ];
+
+      let fruits = 
+      [
+        "사
+      과",
+        "오렌지",
+        "자두",
+      ];
+      VM3137:3 Uncaught SyntaxError: Invalid or unexpected token
+
+      let fruits = 
+      [
+        "사과",
+
+
+        "오렌지",
+        "자두",
+      ];
+      fruits
+      (3) ['사과', '오렌지', '자두']
+
+      let fruits = 
+      [
+        `<ul>
+          <li>abc</li>
+        </ul>`,
+        "오렌지",
+        "자두",
+      ];
+      fruits 
+      (3) ['<ul>\n    <li>abc</li>\n   </ul>', '오렌지', '자두']
+
+      // 값을 아규먼트로 전달할 때 주의!
+      function 값수정(x){
+          x[1] = 100;
+      }
+      값수정(fruits)
+      fruits
+      (3) ['<ul>\n    <li>abc</li>\n   </ul>', 100, '자두']
+      function 값수정2(x){
+          x = 100;
+      }
+      let xx = 1000;
+      값수정2(xx)
+      xx
+      1000
+      a = [1, 2, 3, 4, 5]
+      (5) [1, 2, 3, 4, 5]
+      b = a
+      (5) [1, 2, 3, 4, 5]
+      값수정(b)
+      undefined
+      a
+      (5) [1, 100, 3, 4, 5]
+      b
+      (5) [1, 100, 3, 4, 5]
+
+      // 한 단계 깊은 복사
+      a = [1, 2, 3, 4, 5]
+      b = [...a] 
+      (5) [1, 2, 3, 4, 5]
+
+      값수정(b)
+
+      a
+      (5) [1, 2, 3, 4, 5]
+      b
+      (5) [1, 100, 3, 4, 5]
+
+      [...a, ...a, 1000, ...a]
+      (16) [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1000, 1, 2, 3, 4, 5]
+
+      a = [1, 2, 3, 4, 5]
+
+      b = a.slice()
+      (5) [1, 2, 3, 4, 5]
+
+      b
+      (5) [1, 2, 3, 4, 5]
+
+      b[1] = 1000
+      b
+      (5) [1, 1000, 3, 4, 5]
+
+      // length
+      fruits.length;
+      124
+      fruits
+      (124) [비어 있음 × 123, '사과']
+      let fruits = [];
+      fruits.length = 10;
+      10
+      fruits
+      (10) [비어 있음 × 10]
+      fruits[3] = undefined
+      undefined
+      fruits 
+      (10) [비어 있음 × 3, undefined, 비어 있음 × 6]
+      fruits[4] = null
+      null
+      fruits
+      (10) [비어 있음 × 3, undefined, null, 비어 있음 × 5]
+      let arr = new Array("사과", "배", "기타");
+
+
+
+
+    </script>
+  </body>
+</html>

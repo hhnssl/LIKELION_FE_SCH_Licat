@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+      // 다차원 배열
+
+      let 전교점수 = [
+                // 1반
+                [[10, 20, 30, 40, {name:'leehojun', age:10}],
+                [20, 30, 40, 50, 60]],
+                // 2반
+                [[10, 20, 30, 40, 50],
+                [20, 30, 40, 50, 60]],
+      ];
+
+      // document.write(전교점수[0][1][4]['age']);
+
+      // matrix
+      let m = [[1, 2, 3],
+              [1, 2, 3],
+              [1, 2, 3]]
+
+      document.write(m + m);
+
+      //메모리 주소 확인 불가, python은 가능
+      a = 100000000
+      //100000000
+      b = 100000000
+      //100000000
+      Object.is(a, b)
+      //true
+      //ECMA Script2015 추가
+      //https://stackoverflow.com/questions/50530936/is-there-any-method-to-check-memory-address-of-javascript-variable
+      Object.is(0, -0)
+      //false
+    </script>
+</body>
+</html>

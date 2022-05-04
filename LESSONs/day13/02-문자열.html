@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //문자열 (String)      
+      let txt = 'ABCDEFGHIJKABC';
+      let txt_two = 'mom said \'hello world\'';
+
+      document.write(`txt: ${txt} <br>`); //AB~
+      document.write(`txt.length: ${txt.length} <br>` ); //14
+      document.write(`txt[1]: ${txt[1]} <br>`); //B
+      document.write(`txt_two: ${txt_two} <br>`);
+      document.write(`txt.indexOf("F"): ${txt.indexOf("F")} <br>`); //5
+      document.write(`txt.search("FGH"): ${txt.search("FGH")} <br>`);// 5
+      document.write(`txt.lastIndexOf("Z"): ${txt.lastIndexOf("Z")} <br>`); //-1
+      document.write(`txt.slice(0, 3): ${txt.slice(0, 3)} <br>`); //ABC, 0번째부터 3-1번째까지 출력
+      document.write(`txt.slice(1, 3): ${txt.slice(1, 3)} <br>`); //BC
+      document.write(`txt.substring(0, 3): ${txt.substring(0, 3)} <br>`); // AB
+      document.write(`txt.substring(1, 3): ${txt.substring(1, 3)} <br>`); // BC
+      document.write(`txt.substring(1, 5): ${txt.substring(1, 5)} <br>`); //BCDE
+      document.write(`txt.substr(2, 5): ${txt.substr(2, 5)} <br>`); //C부터 다섯개 == CDEFG
+      document.write(`txt.substr(2, 2): ${txt.substr(2, 2)} <br>`); //CD
+      document.write(`txt.substr(5, 2): ${txt.substr(5, 2)} <br>`); //FG
+      document.write('<br>');
+
+      //정규표현식에서 한 번 더 다뤄드립니다.
+      document.write(`txt.replace('ABC', 'hojun') : ${txt.replace(/ABC/g, 'hojun')} <br>`);
+      document.write(`txt.replace('ABC', 'hojun') : ${txt.replace(/ABC/, 'hojun')} <br>`);
+      document.write('<br>');
+
+
+      document.write(`txt.toUpperCase() : ${txt.toUpperCase()} <br>`);
+      document.write(`txt.toLowerCase() : ${txt.toLowerCase()} <br>`);
+
+
+    </script>
+  </body>
+</html>
