@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .blue {
+      background-color: blue;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <button>Make me BLUE!</button>
+
+  <script>
+    const myBtn = document.querySelector("button");
+
+    myBtn.addEventListener('click', function () {
+
+      // blue 라는 클래스의 속성 값을 지정 할 수 있습니다.
+      // myBtn.classList.add("blue");
+
+      // 클래스를 제거합니다.
+      // myBtn.classList.remove("blue");
+
+      // 클래스를 토글합니다. 없으면 넣어주고, 있으면 제거합니다.
+      // myBtn.classList.toggle("blue");
+
+      // 해당하는 클래스가 있는지 확인합니다.
+      // myBtn.classList.contains("blue");
+
+      // console.log(myBtn.classList.contains("blue"));
+      // 토글 구현해보기
+      if (myBtn.classList.contains("blue") == true) {
+        myBtn.classList.remove("blue");
+      } else {
+        myBtn.classList.add("blue");
+      }
+
+    })
+  </script>
+</body>
+
+</html>

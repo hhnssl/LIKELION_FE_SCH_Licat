@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button>HELLO!</button>
+
+  <script>
+    // 이벤트의 타입에는 click, mouseover, mouseout, wheel 등 다양한 이벤트를 감지합니다.
+    // listener 함수의 인수에는 이벤트에 대한 정보가 담겨있습니다.
+
+    const myBtn = document.querySelector("button");
+
+    myBtn.addEventListener('wheel', function () {
+      console.log("hello world");
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!-- 06에서 강사님 코드 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    div {
+      width: 300px;
+      height: 300px;
+      background-color: #000;
+    }
+
+    .red {
+      background-color: red;
+    }
+
+    .yellow {
+      background-color: yellow;
+    }
+
+    .green {
+      background-color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+
+  <button>빨강</button>
+  <button>노랑</button>
+  <button>초록</button>
+
+  <script>
+    // document.querySelector('div')는 전체 html 문서에서 해당 요소를 찾기 때문에 메모리 효율이 매우 떨어진다. 그러므로 함수 밖에서 쿼리셀렉터를 써야한다
+    // 그러면 document.querySelector('div')를 함수 안에서 세개를 실행하면 이 세개가 각개 전투를 하고, 함수 밖 변수로 선언하면 하나의 document.querySelector('div')가 일당백 하는 건가요?? ==> 맞음!!!
+    const btnRed = document.querySelectorAll('button')[0];
+    const btnYellow = document.querySelectorAll('button')[1];
+    const btnGreen = document.querySelectorAll('button')[2];
+
+    btnRed.addEventListener('click', function () {
+      document.querySelector('div').classList.add('red');
+      document.querySelector('div').classList.remove('yellow');
+      document.querySelector('div').classList.remove('green');
+    })
+    btnYellow.addEventListener('click', function () {
+      document.querySelector('div').classList.add('yellow');
+      document.querySelector('div').classList.remove('red');
+      document.querySelector('div').classList.remove('green');
+    })
+    btnGreen.addEventListener('click', function () {
+      document.querySelector('div').classList.add('green');
+      document.querySelector('div').classList.remove('red');
+      document.querySelector('div').classList.remove('yellow');
+    })
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p></p>
+  <input type="text">
+  <button>Write Something!</button>
+
+  <script>
+    const myBtn = document.querySelector("button");
+    const myP = document.querySelector("p");
+    const myInput = document.querySelector("input");
+
+    // input 요소에 'input' 이벤트를 연결하면 실시간으로 값이 반영되게 만들 수도 있습니다.
+    myInput.addEventListener('input', () => {
+      myP.textContent = myInput.value;
+    });
+
+    // 콘솔로 입력하는 애들
+    // myP.innerHTML = "<strong>I'm Strong!!</strong>";
+    // myP.innerText = "<strong>I'm Strong!!</strong>";
+    // p태그를 div로 바꿔버림
+    // myP.outerHTML = "<div></div>";
+
+  </script>
+</body>
+
+</html>
