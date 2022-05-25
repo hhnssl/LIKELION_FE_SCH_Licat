@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=
+  , initial-scale=1.0">
+  <title>제이쿼리</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <p>hello</p>
+  <h1 class="test">hello world</h1>
+  <div id="test">hello world!!!!!!!!1</div>
+
+  <script>
+    $("p").hide(); //p 태그 숨겨버리기
+    $("#test").show();
+    $(".test").click(function () {
+      alert("클릭!");
+    });
+
+    $('#test').html('<b>hello</b> world');
+  </script>
+
+</body>
+
+</html>
