@@ -6,38 +6,66 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title></title>
+  <style>
+    div {
+      background-color: pink;
+    }
+  </style>
 </head>
 
 <body>
   <div>
-    <textarea name="" id="" cols="30" rows="10"></textarea>
-    <button>저장하기</button>
+    <textarea class="inputMemo" name="" id="" placeholder="메모를 입력하세요" cols="30" rows="10"></textarea>
+    <br>
+    <button class="save">저장하기</button>
+    <button class="clear">지우기</button>
+
+    <div class="memos">
+      <!-- 위에서 쓴 메모 -->
+      <!-- 삭제할 버튼 -->
+      <!-- 수정할 버튼 -->
+    </div>
   </div>
   <script>
-    // setItem(key, value) – 키-값 쌍 저장
-    // getItem(key) – 키에 해당하는 값 호출
-    // removeItem(key) – 해당 값 삭제
-    // clear() – 모든 데이터 삭제
-    // key(index) – 인덱스(index)에 해당하는 키 호출
-    // length – 저장된 항목의 개수
+    const saveBtn = document.querySelector('.save'); // 저장 버튼 
+    const clearBtn = document.querySelector('.clear'); // 저장 버튼 
+    const inputMemo = document.querySelector('.inputMemo'); // 텍스트에리아
+    const memos = document.querySelector('.memos'); // 메모 목록
 
-    const 
+    // memos 안의 요소
+    const memoDiv = document.createElement("div");
+    const editBtn = document.createElement("button");
+    const deleteBtn = document.createElement("button");
 
-    // memo = []
-    // memo.push('메모1')
-    // memo.push('메모2')
-
-    // localStorage.setItem('메모', memo);
-
-    // console.log(localStorage.getItem('메모'));
-    // console.log(localStorage.getItem('메모').split(','));
+    const memo = memoDiv + editBtn + deleteBtn;
 
 
-    // localStorage.setItem('one', '하나');
-    // localStorage.setItem('two', '둘');
-    // console.log(localStorage.getItem('one'));
-    // console.log(localStorage.getItem('two'));
 
+
+
+    // 메모 목록을 담을 빈 컨테이너
+    let memosContainer = [];
+    // let localMemosContainer = [];
+    let memosIndex = 0;
+
+    saveBtn.addEventListener('click', function () {
+      // 1. 배열에 저장
+      memosContainer[memosIndex] = inputMemo.value;
+
+      // 2. 로컬스토리지에 저장 및 화면에 출력
+      localStorage.setItem("memosIndex", inputMemo.value); // textarea에 작성한 값을 키와 값으로 저장
+
+      memos.textContent = localStorage.getItem("memosIndex"); // 화면에 뿌려주기
+      console.log(memos.textContent);
+
+      memosIndex++;
+    });
+
+    clearBtn.addEventListener('click', function () {
+      console.log("clearBtn 눌렸다");
+      // clearBtn 누르면 memo 안 컨텐츠 싹 지우기
+      inputMemo.value = "";
+    });
   </script>
 </body>
 
