@@ -39,24 +39,26 @@
 
     const memo = memoDiv + editBtn + deleteBtn;
 
-
-
-
-
     // 메모 목록을 담을 빈 컨테이너
-    let memosContainer = [];
-    // let localMemosContainer = [];
+    let memosList = [];
     let memosIndex = 0;
 
     saveBtn.addEventListener('click', function () {
       // 1. 배열에 저장
-      memosContainer[memosIndex] = inputMemo.value;
+      memosList[memosIndex] = inputMemo.value;
 
       // 2. 로컬스토리지에 저장 및 화면에 출력
       localStorage.setItem("memosIndex", inputMemo.value); // textarea에 작성한 값을 키와 값으로 저장
 
-      memos.textContent = localStorage.getItem("memosIndex"); // 화면에 뿌려주기
-      console.log(memos.textContent);
+
+      // 이게 여러개여야해
+      for (let a of memosIndex) {
+        // for (let i = 0; i < memosList.length; i++) {
+        // console.log(memosList[i]);
+        // memos.textContent = localStorage.getItem("i"); // 화면에 뿌려주기
+        console.log(localStorage.getItem(`${a}`));
+
+      }
 
       memosIndex++;
     });
