@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body,
+    section,
+    h1,
+    h2,
+    ul,
+    li,
+    button {
+      padding: 0;
+      margin: 0;
+
+      box-sizing: border-box;
+    }
+
+    ul,
+    li {
+      list-style-type: none;
+    }
+
+    button {
+      border: 0;
+      outline: 0;
+      background-color: #fff;
+    }
+
+    .container {
+      background: linear-gradient(#F0F4FF, #A5B6EE);
+    }
+
+    .container-logo {
+      margin: 72px auto;
+    }
+
+    .timer {
+      overflow: hidden;
+      margin: 180px auto;
+      width: 400px;
+      height: 360px;
+      background: linear-gradient(#5572BB, #374B7C);
+
+      border-radius: 16px;
+    }
+
+    .timer-title {
+      display: block;
+      margin-top: 48px;
+      text-align: center;
+      color: #fff;
+      font-size: 2 4px;
+      font-weight: 700;
+    }
+
+    .timer-title::after {
+      margin: 23px auto 33px;
+      content: "";
+      display: block;
+      width: 312px;
+      height: 2px;
+      border-bottom: 2px;
+
+      background: linear-gradient(#3D538A, #5B75B4);
+
+      /* background-color: #3D538A; */
+    }
+
+    .times-list {
+
+      margin: 0 58px 0;
+      display: flex;
+      justify-content: space-between;
+
+    }
+
+    .times-list li {
+
+      position: relative;
+
+      width: 80px;
+      height: 80px;
+
+      color: #A5B6EE;
+      font-size: 12px;
+      font-weight: 700;
+
+      background: linear-gradient(#304577, #4C65A0);
+      border-radius: 4px;
+    }
+
+    .times-title {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .times-aria {
+      color: #fff;
+      font-size: 40px;
+      font-weight: 700;
+      text-align: center;
+      /* vertical-align: ; */
+    }
+
+    .buttons {
+      margin: 40px 82px;
+      display: flex;
+      justify-content: space-between;
+
+
+    }
+
+    .start,
+    .reset {
+      width: 112px;
+      height: 48px;
+      background-color: #324577;
+      border-radius: 50px;
+
+      color: #617199;
+      font-size: 14px;
+      font-weight: 700;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="container">
+    <h1 class="container-logo">
+      <img src="./weniv-logo.png" alt="위니브 로고">
+    </h1>
+    <article class="timer">
+      <h2 class="timer-title">TIMER</h2>
+      <!-- 가상요소로 선 긋기 -->
+      <div class="times">
+        <ul class="times-list">
+          <li class="hrs">
+            <span class="times-title">HRS</span>
+            <div class="times-aria">00</div>
+          </li>
+          <li class="min">
+            <span class="times-title">MIN</span>
+            <div class="times-aria">00</div>
+          </li>
+          <li class="sec">
+            <span class="times-title">SEC</span>
+            <div class="times-aria">00</div>
+          </li>
+        </ul>
+      </div>
+      <div class="buttons">
+        <button type="button" class="start">START</button>
+        <button type="button" class="reset">RESET</button>
+      </div>
+
+
+    </article>
+    <div class="">
+      <img src="./WENIV-Corp.png" alt="기업 위니브">
+    </div>
+  </section>
+
+</body>
+
+</html>
