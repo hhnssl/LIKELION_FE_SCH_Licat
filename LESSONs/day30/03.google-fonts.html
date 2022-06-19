@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gugi&family=Jua&family=Nanum+Gothic:wght@800&family=Nanum+Myeongjo:wght@800&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.1/redux.js"></script>
+</head>
+
+<body>
+  <style>
+    /* .container {
+      border: 5px solid black;
+      padding: 10px;
+    } */
+
+    .box{
+      display: flex;
+    }
+
+    .box div{
+      width: 200px;
+      border: 2px solid black;
+    }
+  </style>
+  <div id="container">
+  </div>
+  <div class="box">
+    <div id="one"></div>
+    <div id="two"></div>
+    <div id="three"></div>
+    <div id="four"></div>
+    <div id="five"></div>
+    <div id="six"></div>
+  </div>
+
+  <script>
+    const CHANGE_INPUT = "CHANGE_INPUT";
+    // state는 현재 상태, action은 주문 받은 것! 
+    function reducer(state, action) {
+      console.log(state, action);
+      if (state === undefined) {
+        return "입력하세요!";
+      }
+      let newState;
+      if (action.type === 'CHANGE_INPUT') {
+        //복제해야 합니다. 그냥 {color:'red'}이런 식으로 리턴해줘도 되긴 하는데 리덕스의 고급기능을 쓰지 못합니다.
+        newState = { ...state, fontFamily: action.fontFamily }
+
+        console.log(state)
+        console.log(newState)
+      }
+
+      console.log(store.getState())
+      return newState;
+    }
+    // Redux는 cdn으로 생깁니다.
+    let store = Redux.createStore(
+      reducer,
+      window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() // redux dev tools를 사용하기 위한 코드
+    );
+
+    function input() {
+      let state = store.getState();
+      document.querySelector("#container").innerHTML = `
+        <div class="container" id="component_input" style="width:500px">
+          <input type="text" placeholder="안녕"/>
+          <button type="button" onclick="store.dispatch({typs:'CHANGE_INPUT', "하하하하"})">반영하기</button>
+          <button type="button">red</button>
+          <button type="button">green</button>
+          <button type="button">blue</button>
+        </div>
+      `;
+    }
+
+    function one() {
+      let state = store.getState();
+      //type은 반드시 있어야 합니다.
+      // 바뀔 때마다 console에 store.getState()를 실행해보세요.
+      document.querySelector('#one').innerHTML = `
+                        <h1 style="font-family:'Black Han Sans', sans-serif">${state}</h1>
+            `;
+    }
+    // 값이 바뀔 때마다 red 함수를 호출
+    store.subscribe(one);
+    one();
+
+    function two() {
+      let state = store.getState();
+      //type은 반드시 있어야 합니다.
+      // 바뀔 때마다 console에 store.getState()를 실행해보세요.
+      document.querySelector('#two').innerHTML = `
+                        <h1 style="font-family:'Gugi', cursive">${state}</h1>
+            `;
+    }
+    // 값이 바뀔 때마다 red 함수를 호출
+    store.subscribe(two);
+    two();
+
+    function three() {
+      let state = store.getState();
+      //type은 반드시 있어야 합니다.
+      // 바뀔 때마다 console에 store.getState()를 실행해보세요.
+      document.querySelector('#three').innerHTML = `
+                        <h1 style="font-family:'Jua', sans-serif">${state}</h1>
+            `;
+    }
+    // 값이 바뀔 때마다 red 함수를 호출
+    store.subscribe(three);
+    three();
+
+    function four() {
+      let state = store.getState();
+      //type은 반드시 있어야 합니다.
+      // 바뀔 때마다 console에 store.getState()를 실행해보세요.
+      document.querySelector('#four').innerHTML = `
+                        <h1 style="font-family:'Nanum Gothic', sans-serif">${state}</h1>
+            `;
+    }
+    // 값이 바뀔 때마다 red 함수를 호출
+    store.subscribe(four);
+    four();
+
+    function five() {
+      let state = store.getState();
+      //type은 반드시 있어야 합니다.
+      // 바뀔 때마다 console에 store.getState()를 실행해보세요.
+      document.querySelector('#five').innerHTML = `
+                        <h1 style="font-family:'Nanum Myeongjo', serif">${state}</h1>
+            `;
+    }
+    // 값이 바뀔 때마다 red 함수를 호출
+    store.subscribe(five);
+    five();
+
+    function six() {
+      let state = store.getState();
+      //type은 반드시 있어야 합니다.
+      // 바뀔 때마다 console에 store.getState()를 실행해보세요.
+      document.querySelector('#six').innerHTML = `
+                        <h1 style="font-family:'Noto Sans KR', sans-serif">${state}</h1>
+            `;
+    }
+    // 값이 바뀔 때마다 red 함수를 호출
+    store.subscribe(six);
+    six();
+
+  </script>
+</body>
+
+</html>
